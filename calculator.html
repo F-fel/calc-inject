@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Calculator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 10px;
+      background-color: #f5f5f5;
+    }
+    input {
+      width: 60px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Calculatrice simple</h3>
+  <input type="number" id="num1" placeholder="1" />
+  +
+  <input type="number" id="num2" placeholder="2" />
+  <button onclick="add()">=</button>
+  <strong id="result"></strong>
+
+  <script>
+    function add() {
+      const a = parseFloat(document.getElementById("num1").value) || 0;
+      const b = parseFloat(document.getElementById("num2").value) || 0;
+      document.getElementById("result").textContent = " " + (a + b);
+    }
+  </script>
+</body>
+</html>
